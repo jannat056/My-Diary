@@ -1,502 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <!-- ==============================
-         BASIC META
-    =============================== -->
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta
         name="description"
-        content="My Diary - A private digital journal to write, organize, and preserve your daily thoughts and memories."
+        content="My Diary - A personal digital diary to write, save, and organize your thoughts and memories."
     >
 
-    <meta
-        name="author"
-        content="Jannat"
-    >
+    <meta name="author" content="Jannat">
 
-    <meta
-        name="theme-color"
-        content="#ffffff"
-    >
+    <title>My Diary | Personal Digital Diary</title>
 
-    <title>My Diary | Personal Digital Journal</title>
-
-
-    <!-- ==============================
-         FONTS
-    =============================== -->
-
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
         rel="stylesheet"
     >
 
-
-    <!-- ==============================
-         CSS
-    =============================== -->
-
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
-
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+        <div class="container header-container">
 
-    <!-- ==================================================
-         PAGE WRAPPER
-    =================================================== -->
+            <a href="#home" class="logo">
+                <span class="logo-icon">📖</span>
+                <span>My Diary</span>
+            </a>
 
-    <div id="app">
-
-
-        <!-- ==================================================
-             HEADER
-        =================================================== -->
-
-        <header class="site-header" id="site-header">
-
-            <div class="container">
-
-                <nav
-                    class="navbar"
-                    aria-label="Main navigation"
+            <nav class="main-nav">
+                <button
+                    class="menu-toggle"
+                    id="menu-toggle"
+                    aria-label="Toggle navigation menu"
+                    type="button"
                 >
+                    ☰
+                </button>
+
+                <ul class="nav-links" id="nav-links">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#write">Write</a>
+                    </li>
+                    <li>
+                        <a href="#entries">Entries</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                </ul>
+
+                <button
+                    class="theme-toggle"
+                    id="theme-toggle"
+                    type="button"
+                    aria-label="Toggle dark mode"
+                >
+                    🌙
+                </button>
+            </nav>
+
+        </div>
+    </header>
 
 
-                    <!-- Logo -->
+    <!-- ================= MAIN ================= -->
+    <main>
 
-                    <a
-                        href="#home"
-                        class="logo"
-                        aria-label="My Diary Home"
-                    >
+        <!-- ================= HERO ================= -->
+        <section class="hero" id="home">
+            <div class="container hero-content">
 
-                        <span
-                            class="logo-icon"
-                            aria-hidden="true"
-                        >
-                            📔
-                        </span>
+                <div class="hero-text">
+                    <span class="hero-label">YOUR PERSONAL SPACE</span>
 
-                        <span class="logo-text">
-                            My Diary
-                        </span>
+                    <h1>
+                        Write Your
+                        <span>Story.</span>
+                    </h1>
 
-                    </a>
+                    <p>
+                        Capture your thoughts, memories, feelings, and
+                        everyday moments in your personal digital diary.
+                    </p>
 
+                    <div class="hero-buttons">
+                        <a href="#write" class="btn btn-primary">
+                            Start Writing
+                        </a>
 
-                    <!-- Desktop Navigation -->
-
-                    <ul class="nav-links" id="nav-links">
-
-                        <li>
-                            <a
-                                href="#home"
-                                class="nav-link active"
-                            >
-                                Home
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                href="#write"
-                                class="nav-link"
-                            >
-                                Write
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                href="#entries"
-                                class="nav-link"
-                            >
-                                Entries
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                href="#about"
-                                class="nav-link"
-                            >
-                                About
-                            </a>
-                        </li>
-
-                    </ul>
-
-
-                    <!-- Header Actions -->
-
-                    <div class="header-actions">
-
-
-                        <!-- Theme Toggle -->
-
-                        <button
-                            type="button"
-                            id="theme-toggle"
-                            class="icon-button theme-toggle"
-                            aria-label="Switch to dark mode"
-                            title="Toggle theme"
-                        >
-
-                            <span
-                                class="theme-icon"
-                                aria-hidden="true"
-                            >
-                                🌙
-                            </span>
-
-                        </button>
-
-
-                        <!-- Mobile Menu -->
-
-                        <button
-                            type="button"
-                            id="menu-toggle"
-                            class="icon-button menu-toggle"
-                            aria-label="Open navigation menu"
-                            aria-expanded="false"
-                            aria-controls="nav-links"
-                        >
-
-                            <span
-                                class="menu-icon"
-                                aria-hidden="true"
-                            >
-                                ☰
-                            </span>
-
-                        </button>
-
+                        <a href="#entries" class="btn btn-secondary">
+                            View Entries
+                        </a>
                     </div>
-
-                </nav>
+                </div>
 
             </div>
-
-        </header>
-
-
-        <!-- ==================================================
-             MAIN
-        =================================================== -->
-
-        <main>
+        </section>
 
 
-            <!-- ==================================================
-                 HERO SECTION
-            =================================================== -->
+        <!-- ================= STATS ================= -->
+        <section class="stats-section">
+            <div class="container stats-grid">
 
-            <section
-                id="home"
-                class="hero-section"
-            >
+                <div class="stat-card">
+                    <span class="stat-icon">📝</span>
 
-                <div class="container">
-
-                    <div class="hero-content">
-
-                        <span class="hero-badge">
-                            YOUR PERSONAL JOURNAL
-                        </span>
-
-                        <h1 class="hero-title">
-                            Every day has
-                            <span class="highlight">
-                                a story.
-                            </span>
-                        </h1>
-
-                        <p class="hero-description">
-                            Write down your thoughts, capture your
-                            memories, and preserve the little moments
-                            that make life meaningful.
-                        </p>
-
-
-                        <div class="hero-actions">
-
-                            <a
-                                href="#write"
-                                class="btn btn-primary"
-                            >
-
-                                <span aria-hidden="true">
-                                    ✍️
-                                </span>
-
-                                Write Today's Entry
-
-                            </a>
-
-
-                            <a
-                                href="#entries"
-                                class="btn btn-secondary"
-                            >
-                                View My Entries
-                            </a>
-
-                        </div>
-
+                    <div>
+                        <h3 id="total-entries">0</h3>
+                        <p>Total Entries</p>
                     </div>
-
                 </div>
 
-            </section>
+                <div class="stat-card">
+                    <span class="stat-icon">⭐</span>
 
-
-            <!-- ==================================================
-                 STATISTICS SECTION
-            =================================================== -->
-
-            <section
-                class="stats-section"
-                aria-label="Diary statistics"
-            >
-
-                <div class="container">
-
-                    <div class="stats-grid">
-
-
-                        <!-- Total Entries -->
-
-                        <article class="stat-card">
-
-                            <div
-                                class="stat-icon"
-                                aria-hidden="true"
-                            >
-                                📖
-                            </div>
-
-                            <div class="stat-content">
-
-                                <span
-                                    class="stat-number"
-                                    id="total-entries"
-                                >
-                                    0
-                                </span>
-
-                                <span class="stat-label">
-                                    Total Entries
-                                </span>
-
-                            </div>
-
-                        </article>
-
-
-                        <!-- Favorites -->
-
-                        <article class="stat-card">
-
-                            <div
-                                class="stat-icon"
-                                aria-hidden="true"
-                            >
-                                ❤️
-                            </div>
-
-                            <div class="stat-content">
-
-                                <span
-                                    class="stat-number"
-                                    id="favorite-entries"
-                                >
-                                    0
-                                </span>
-
-                                <span class="stat-label">
-                                    Favorites
-                                </span>
-
-                            </div>
-
-                        </article>
-
-
-                        <!-- Happy Days -->
-
-                        <article class="stat-card">
-
-                            <div
-                                class="stat-icon"
-                                aria-hidden="true"
-                            >
-                                😊
-                            </div>
-
-                            <div class="stat-content">
-
-                                <span
-                                    class="stat-number"
-                                    id="happy-entries"
-                                >
-                                    0
-                                </span>
-
-                                <span class="stat-label">
-                                    Happy Days
-                                </span>
-
-                            </div>
-
-                        </article>
-
-
-                        <!-- Current Year -->
-
-                        <article class="stat-card">
-
-                            <div
-                                class="stat-icon"
-                                aria-hidden="true"
-                            >
-                                📅
-                            </div>
-
-                            <div class="stat-content">
-
-                                <span
-                                    class="stat-number"
-                                    id="current-year"
-                                >
-                                    2026
-                                </span>
-
-                                <span class="stat-label">
-                                    Diary Year
-                                </span>
-
-                            </div>
-
-                        </article>
-
+                    <div>
+                        <h3 id="favorite-entries">0</h3>
+                        <p>Favorites</p>
                     </div>
-
                 </div>
 
-            </section>
+                <div class="stat-card">
+                    <span class="stat-icon">😊</span>
 
-
-            <!-- ==================================================
-                 WRITE ENTRY SECTION
-            =================================================== -->
-
-            <section
-                id="write"
-                class="write-section"
-            >
-
-                <div class="container">
-
-
-                    <!-- Section Heading -->
-
-                    <div class="section-heading">
-
-                        <span class="section-label">
-                            TODAY'S JOURNAL
-                        </span>
-
-                        <h2>
-                            Write a new entry
-                        </h2>
-
-                        <p>
-                            Take a moment to record what is on your mind.
-                        </p>
-
+                    <div>
+                        <h3 id="happy-entries">0</h3>
+                        <p>Happy Days</p>
                     </div>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-icon">📅</span>
+
+                    <div>
+                        <h3 id="current-year">2026</h3>
+                        <p>Current Year</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
 
-                    <div class="write-layout">
+        <!-- ================= WRITE ================= -->
+        <section class="section write-section" id="write">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">WRITE</span>
+                    <h2>Write Your Thoughts</h2>
+                    <p>
+                        Take a moment for yourself and put your thoughts
+                        into words.
+                    </p>
+                </div>
 
 
-                        <!-- ==========================================
-                             DIARY FORM
-                        =========================================== -->
+                <div class="diary-wrapper">
 
-                        <form
-                            id="diary-form"
-                            class="diary-form"
-                            autocomplete="off"
-                        >
+                    <form id="diary-form" class="diary-form">
 
-                            <!-- Hidden Entry ID -->
+                        <!-- Title -->
+                        <div class="form-group">
+                            <label for="entry-title">
+                                Entry Title
+                            </label>
 
                             <input
-                                type="hidden"
-                                id="entry-id"
-                                name="entry-id"
+                                type="text"
+                                id="entry-title"
+                                name="title"
+                                placeholder="Give your entry a title..."
+                                maxlength="100"
+                                required
                             >
+                        </div>
 
 
-                            <!-- Title -->
-
-                            <div class="form-group">
-
-                                <label for="entry-title">
-                                    Entry Title
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="entry-title"
-                                    name="title"
-                                    placeholder="Give your day a title..."
-                                    maxlength="100"
-                                    required
-                                >
-
-                                <small
-                                    class="input-error"
-                                    id="title-error"
-                                    aria-live="polite"
-                                ></small>
-
-                            </div>
-
-
-                            <!-- Date -->
+                        <!-- Date -->
+                        <div class="form-row">
 
                             <div class="form-group">
-
                                 <label for="entry-date">
                                     Date
                                 </label>
@@ -507,22 +204,13 @@
                                     name="date"
                                     required
                                 >
-
-                                <small
-                                    class="input-error"
-                                    id="date-error"
-                                    aria-live="polite"
-                                ></small>
-
                             </div>
 
 
                             <!-- Mood -->
-
                             <div class="form-group">
-
                                 <label for="entry-mood">
-                                    How are you feeling?
+                                    Mood
                                 </label>
 
                                 <select
@@ -530,808 +218,429 @@
                                     name="mood"
                                     required
                                 >
+                                    <option value="">
+                                        Select your mood
+                                    </option>
 
-                                    <option value="happy">
+                                    <option value="Happy">
                                         😊 Happy
                                     </option>
 
-                                    <option value="calm">
-                                        😌 Calm
-                                    </option>
-
-                                    <option value="excited">
+                                    <option value="Excited">
                                         🤩 Excited
                                     </option>
 
-                                    <option value="loved">
-                                        🥰 Loved
+                                    <option value="Calm">
+                                        😌 Calm
                                     </option>
 
-                                    <option value="sad">
-                                        😔 Sad
+                                    <option value="Sad">
+                                        😢 Sad
                                     </option>
 
-                                    <option value="angry">
-                                        😡 Angry
+                                    <option value="Angry">
+                                        😠 Angry
                                     </option>
 
-                                    <option value="tired">
+                                    <option value="Tired">
                                         😴 Tired
                                     </option>
 
-                                    <option value="confused">
-                                        😵 Confused
+                                    <option value="Thoughtful">
+                                        🤔 Thoughtful
                                     </option>
-
                                 </select>
-
                             </div>
 
+                        </div>
 
-                            <!-- Content -->
 
-                            <div class="form-group">
-
-                                <div class="form-label-row">
-
-                                    <label for="entry-content">
-                                        Your Thoughts
-                                    </label>
-
-                                    <span
-                                        id="character-count"
-                                        class="character-count"
-                                    >
-                                        0 / 5000
-                                    </span>
-
-                                </div>
-
-
-                                <textarea
-                                    id="entry-content"
-                                    name="content"
-                                    rows="12"
-                                    maxlength="5000"
-                                    placeholder="Write whatever is on your mind..."
-                                    required
-                                ></textarea>
-
-                                <small
-                                    class="input-error"
-                                    id="content-error"
-                                    aria-live="polite"
-                                ></small>
-
-                            </div>
-
-
-                            <!-- Tags -->
-
-                            <div class="form-group">
-
-                                <label for="entry-tags">
-                                    Tags
-                                    <span class="optional">
-                                        (optional)
-                                    </span>
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="entry-tags"
-                                    name="tags"
-                                    placeholder="e.g. study, family, travel"
-                                    maxlength="200"
-                                >
-
-                            </div>
-
-
-                            <!-- Favorite -->
-
-                            <div class="form-checkbox">
-
-                                <input
-                                    type="checkbox"
-                                    id="entry-favorite"
-                                    name="favorite"
-                                >
-
-                                <label for="entry-favorite">
-                                    ❤️ Add this entry to favorites
-                                </label>
-
-                            </div>
-
-
-                            <!-- Form Actions -->
-
-                            <div class="form-actions">
-
-                                <button
-                                    type="reset"
-                                    id="clear-form"
-                                    class="btn btn-secondary"
-                                >
-                                    Clear
-                                </button>
-
-
-                                <button
-                                    type="submit"
-                                    id="save-entry"
-                                    class="btn btn-primary"
-                                >
-
-                                    <span aria-hidden="true">
-                                        💾
-                                    </span>
-
-                                    <span id="save-button-text">
-                                        Save Entry
-                                    </span>
-
-                                </button>
-
-                            </div>
-
-                        </form>
-
-
-                        <!-- ==========================================
-                             WRITING TIPS
-                        =========================================== -->
-
-                        <aside
-                            class="writing-tips"
-                            aria-label="Writing inspiration"
-                        >
-
-                            <div class="tips-card">
-
-                                <div
-                                    class="tips-icon"
-                                    aria-hidden="true"
-                                >
-                                    💡
-                                </div>
-
-                                <h3>
-                                    Need some inspiration?
-                                </h3>
-
-                                <p>
-                                    Not sure what to write?
-                                    Start with one of these.
-                                </p>
-
-                                <ul class="tips-list">
-
-                                    <li>
-                                        What made you smile today?
-                                    </li>
-
-                                    <li>
-                                        What did you learn today?
-                                    </li>
-
-                                    <li>
-                                        What are you grateful for?
-                                    </li>
-
-                                    <li>
-                                        What challenge did you overcome?
-                                    </li>
-
-                                    <li>
-                                        What do you want to remember?
-                                    </li>
-
-                                </ul>
-
-                            </div>
-
-                        </aside>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- ==================================================
-                 ENTRIES SECTION
-            =================================================== -->
-
-            <section
-                id="entries"
-                class="entries-section"
-            >
-
-                <div class="container">
-
-
-                    <!-- Section Heading -->
-
-                    <div class="section-heading">
-
-                        <span class="section-label">
-                            YOUR MEMORIES
-                        </span>
-
-                        <h2>
-                            Diary Entries
-                        </h2>
-
-                        <p>
-                            Revisit the moments you have saved.
-                        </p>
-
-                    </div>
-
-
-                    <!-- ==========================================
-                         TOOLBAR
-                    =========================================== -->
-
-                    <div class="entries-toolbar">
-
-
-                        <!-- Search -->
-
-                        <div class="search-wrapper">
-
-                            <label
-                                for="search-entry"
-                                class="sr-only"
-                            >
-                                Search diary entries
+                        <!-- Content -->
+                        <div class="form-group">
+                            <label for="entry-content">
+                                Your Thoughts
                             </label>
 
-                            <span
-                                class="search-icon"
-                                aria-hidden="true"
-                            >
-                                🔍
-                            </span>
+                            <textarea
+                                id="entry-content"
+                                name="content"
+                                rows="10"
+                                maxlength="5000"
+                                placeholder="Write whatever is on your mind..."
+                                required
+                            ></textarea>
+
+                            <div class="character-counter">
+                                <span id="character-count">0</span>
+                                / 5000 characters
+                            </div>
+                        </div>
+
+
+                        <!-- Tags -->
+                        <div class="form-group">
+                            <label for="entry-tags">
+                                Tags
+                            </label>
 
                             <input
-                                type="search"
-                                id="search-entry"
-                                placeholder="Search your diary..."
-                                autocomplete="off"
+                                type="text"
+                                id="entry-tags"
+                                name="tags"
+                                placeholder="e.g. life, study, travel, memories"
+                            >
+                        </div>
+
+
+                        <!-- Favorite -->
+                        <div class="form-checkbox">
+                            <input
+                                type="checkbox"
+                                id="entry-favorite"
+                                name="favorite"
                             >
 
+                            <label for="entry-favorite">
+                                Add this entry to favorites
+                            </label>
+                        </div>
+
+
+                        <!-- Buttons -->
+                        <div class="form-actions">
+
                             <button
-                                type="button"
-                                id="clear-search"
-                                class="clear-search"
-                                aria-label="Clear search"
-                                title="Clear search"
+                                type="submit"
+                                class="btn btn-primary"
                             >
-                                ×
+                                Save Entry
+                            </button>
+
+                            <button
+                                type="reset"
+                                class="btn btn-secondary"
+                            >
+                                Clear
                             </button>
 
                         </div>
 
-
-                        <!-- Mood Filter -->
-
-                        <div class="filter-wrapper">
-
-                            <label
-                                for="mood-filter"
-                                class="sr-only"
-                            >
-                                Filter entries by mood
-                            </label>
-
-                            <select id="mood-filter">
-
-                                <option value="all">
-                                    All Moods
-                                </option>
-
-                                <option value="happy">
-                                    😊 Happy
-                                </option>
-
-                                <option value="calm">
-                                    😌 Calm
-                                </option>
-
-                                <option value="excited">
-                                    🤩 Excited
-                                </option>
-
-                                <option value="loved">
-                                    🥰 Loved
-                                </option>
-
-                                <option value="sad">
-                                    😔 Sad
-                                </option>
-
-                                <option value="angry">
-                                    😡 Angry
-                                </option>
-
-                                <option value="tired">
-                                    😴 Tired
-                                </option>
-
-                                <option value="confused">
-                                    😵 Confused
-                                </option>
-
-                            </select>
-
-                        </div>
+                    </form>
 
 
-                        <!-- Sort -->
+                    <!-- Writing Tips -->
+                    <aside class="writing-tips">
 
-                        <div class="sort-wrapper">
+                        <h3>Writing Tips</h3>
 
-                            <label
-                                for="sort-entries"
-                                class="sr-only"
-                            >
-                                Sort diary entries
-                            </label>
+                        <ul>
+                            <li>
+                                Write honestly and freely.
+                            </li>
 
-                            <select id="sort-entries">
+                            <li>
+                                Don't worry about grammar.
+                            </li>
 
-                                <option value="newest">
-                                    Newest First
-                                </option>
+                            <li>
+                                Describe how you feel.
+                            </li>
 
-                                <option value="oldest">
-                                    Oldest First
-                                </option>
+                            <li>
+                                Capture small moments.
+                            </li>
 
-                                <option value="az">
-                                    Title A-Z
-                                </option>
+                            <li>
+                                Write for yourself.
+                            </li>
+                        </ul>
 
-                                <option value="za">
-                                    Title Z-A
-                                </option>
-
-                            </select>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- Results Information -->
-
-                    <div
-                        class="results-info"
-                        id="results-info"
-                        aria-live="polite"
-                    >
-                        Showing all entries
-                    </div>
-
-
-                    <!-- ==========================================
-                         ENTRIES GRID
-                    =========================================== -->
-
-                    <div
-                        id="entries-container"
-                        class="entries-grid"
-                        aria-live="polite"
-                    >
-
-                        <!--
-                            JavaScript will generate
-                            diary entry cards here.
-                        -->
-
-                    </div>
-
-
-                    <!-- ==========================================
-                         EMPTY STATE
-                    =========================================== -->
-
-                    <div
-                        id="empty-state"
-                        class="empty-state"
-                    >
-
-                        <div
-                            class="empty-state-icon"
-                            aria-hidden="true"
-                        >
-                            📖
-                        </div>
-
-                        <h3>
-                            Your diary is empty
-                        </h3>
-
-                        <p>
-                            Your first memory is waiting to be written.
-                        </p>
-
-                        <a
-                            href="#write"
-                            class="btn btn-primary"
-                        >
-                            ✍️ Write Your First Entry
-                        </a>
-
-                    </div>
-
-
-                    <!-- ==========================================
-                         NO SEARCH RESULTS
-                    =========================================== -->
-
-                    <div
-                        id="no-results"
-                        class="empty-state hidden"
-                    >
-
-                        <div
-                            class="empty-state-icon"
-                            aria-hidden="true"
-                        >
-                            🔍
-                        </div>
-
-                        <h3>
-                            No entries found
-                        </h3>
-
-                        <p>
-                            Try a different search term or mood filter.
-                        </p>
-
-                        <button
-                            type="button"
-                            id="reset-filters"
-                            class="btn btn-secondary"
-                        >
-                            Clear Filters
-                        </button>
-
-                    </div>
+                    </aside>
 
                 </div>
 
-            </section>
+            </div>
+        </section>
 
 
-            <!-- ==================================================
-                 ABOUT SECTION
-            =================================================== -->
-
-            <section
-                id="about"
-                class="about-section"
-            >
-
-                <div class="container">
-
-                    <div class="about-content">
-
-                        <span class="section-label">
-                            ABOUT MY DIARY
-                        </span>
-
-                        <h2>
-                            A quiet place for your thoughts.
-                        </h2>
-
-                        <p>
-                            My Diary is a personal digital journal
-                            created to help you record your thoughts,
-                            feelings, memories, achievements, and
-                            everyday moments.
-                        </p>
-
-                        <p>
-                            Your entries are stored locally in your
-                            browser, giving you a simple and personal
-                            space to write.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-        </main>
-
-
-        <!-- ==================================================
-             FOOTER
-        =================================================== -->
-
-        <footer class="site-footer">
-
+        <!-- ================= ENTRIES ================= -->
+        <section class="section entries-section" id="entries">
             <div class="container">
 
-                <div class="footer-content">
+                <div class="section-heading">
+                    <span class="section-label">MEMORIES</span>
+                    <h2>Your Diary Entries</h2>
+                    <p>
+                        Browse, search, and organize your personal memories.
+                    </p>
+                </div>
 
 
-                    <!-- Footer Brand -->
+                <!-- Toolbar -->
+                <div class="entries-toolbar">
 
-                    <div class="footer-brand">
+                    <!-- Search -->
+                    <div class="search-box">
+                        <label for="search-entries" class="sr-only">
+                            Search entries
+                        </label>
 
-                        <a
-                            href="#home"
-                            class="logo"
+                        <input
+                            type="search"
+                            id="search-entries"
+                            placeholder="Search your entries..."
                         >
+                    </div>
 
-                            <span
-                                class="logo-icon"
-                                aria-hidden="true"
-                            >
-                                📔
-                            </span>
 
-                            <span class="logo-text">
-                                My Diary
-                            </span>
+                    <!-- Filter -->
+                    <div class="filter-box">
+                        <label for="filter-mood" class="sr-only">
+                            Filter by mood
+                        </label>
 
-                        </a>
+                        <select id="filter-mood">
+                            <option value="all">
+                                All Moods
+                            </option>
+
+                            <option value="Happy">
+                                Happy
+                            </option>
+
+                            <option value="Excited">
+                                Excited
+                            </option>
+
+                            <option value="Calm">
+                                Calm
+                            </option>
+
+                            <option value="Sad">
+                                Sad
+                            </option>
+
+                            <option value="Angry">
+                                Angry
+                            </option>
+
+                            <option value="Tired">
+                                Tired
+                            </option>
+
+                            <option value="Thoughtful">
+                                Thoughtful
+                            </option>
+                        </select>
+                    </div>
+
+
+                    <!-- Sort -->
+                    <div class="sort-box">
+                        <label for="sort-entries" class="sr-only">
+                            Sort entries
+                        </label>
+
+                        <select id="sort-entries">
+                            <option value="newest">
+                                Newest First
+                            </option>
+
+                            <option value="oldest">
+                                Oldest First
+                            </option>
+
+                            <option value="title">
+                                By Title
+                            </option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <!-- Entries Container -->
+                <div
+                    class="entries-container"
+                    id="entries-container"
+                >
+                    <!-- Diary entries will be added by JavaScript -->
+                </div>
+
+
+                <!-- Empty State -->
+                <div
+                    class="empty-state"
+                    id="empty-state"
+                    hidden
+                >
+                    <div class="empty-icon">📖</div>
+
+                    <h3>No Diary Entries Yet</h3>
+
+                    <p>
+                        Your diary is waiting for its first story.
+                    </p>
+
+                    <a
+                        href="#write"
+                        class="btn btn-primary"
+                    >
+                        Write Your First Entry
+                    </a>
+                </div>
+
+
+                <!-- No Results -->
+                <div
+                    class="no-results"
+                    id="no-results"
+                    hidden
+                >
+                    <div class="empty-icon">🔍</div>
+
+                    <h3>No Entries Found</h3>
+
+                    <p>
+                        Try changing your search or filter.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+        <section class="section about-section" id="about">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">ABOUT</span>
+
+                    <h2>About My Diary</h2>
+
+                    <p>
+                        A simple and beautiful place to keep your
+                        thoughts and memories.
+                    </p>
+                </div>
+
+
+                <div class="about-content">
+
+                    <div class="about-text">
+                        <h3>Your Private Digital Journal</h3>
 
                         <p>
-                            Every day has a story worth remembering.
+                            My Diary is a simple personal diary application
+                            designed to help you record your daily thoughts,
+                            experiences, feelings, and memories.
                         </p>
 
+                        <p>
+                            Everything is organized in one clean interface
+                            so you can easily write, search, filter, and
+                            revisit your memories.
+                        </p>
                     </div>
-
-
-                    <!-- Footer Navigation -->
-
-                    <div class="footer-navigation">
-
-                        <h3>
-                            Quick Links
-                        </h3>
-
-                        <ul>
-
-                            <li>
-                                <a href="#home">
-                                    Home
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#write">
-                                    Write
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#entries">
-                                    Entries
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#about">
-                                    About
-                                </a>
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-
-                    <!-- Footer Features -->
-
-                    <div class="footer-navigation">
-
-                        <h3>
-                            Features
-                        </h3>
-
-                        <ul>
-
-                            <li>
-                                <a href="#write">
-                                    New Entry
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#entries">
-                                    Search
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#entries">
-                                    Favorites
-                                </a>
-                            </li>
-
-                            <li>
-                                <button
-                                    type="button"
-                                    id="footer-theme-toggle"
-                                    class="footer-button"
-                                >
-                                    Toggle Theme
-                                </button>
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Footer Bottom -->
-
-                <div class="footer-bottom">
-
-                    <p>
-                        ©
-                        <span id="footer-year">
-                            2026
-                        </span>
-                        My Diary. All rights reserved.
-                    </p>
-
-                    <p>
-                        Made with ❤️ using HTML, CSS & JavaScript.
-                    </p>
 
                 </div>
 
             </div>
+        </section>
 
-        </footer>
+    </main>
 
 
-        <!-- ==================================================
-             TOAST NOTIFICATION
-        =================================================== -->
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <div class="container footer-content">
 
-        <div
-            id="toast"
-            class="toast"
-            role="status"
-            aria-live="polite"
-            aria-atomic="true"
-        >
+            <p>
+                &copy; <span id="footer-year">2026</span>
+                My Diary. All rights reserved.
+            </p>
 
-            <span
-                class="toast-icon"
-                id="toast-icon"
-                aria-hidden="true"
-            >
-                ✓
-            </span>
-
-            <span
-                class="toast-message"
-                id="toast-message"
-            >
-                Entry saved successfully.
-            </span>
-
-            <button
-                type="button"
-                id="toast-close"
-                class="toast-close"
-                aria-label="Close notification"
-            >
-                ×
-            </button>
+            <p>
+                Made with HTML, CSS & JavaScript.
+            </p>
 
         </div>
+    </footer>
 
 
-        <!-- ==================================================
-             CONFIRMATION MODAL
-        =================================================== -->
-
-        <div
-            id="modal-overlay"
-            class="modal-overlay"
-            aria-hidden="true"
-        >
-
-            <div
-                id="confirmation-modal"
-                class="modal"
-                role="dialog"
-                aria-modal="true"
-                aria-labelledby="modal-title"
-            >
-
-                <button
-                    type="button"
-                    id="modal-close"
-                    class="modal-close"
-                    aria-label="Close dialog"
-                >
-                    ×
-                </button>
-
-                <div
-                    class="modal-icon"
-                    aria-hidden="true"
-                >
-                    ⚠️
-                </div>
-
-                <h2 id="modal-title">
-                    Delete this entry?
-                </h2>
-
-                <p id="modal-message">
-                    This action cannot be undone.
-                </p>
-
-                <div class="modal-actions">
-
-                    <button
-                        type="button"
-                        id="modal-cancel"
-                        class="btn btn-secondary"
-                    >
-                        Cancel
-                    </button>
-
-                    <button
-                        type="button"
-                        id="modal-confirm"
-                        class="btn btn-danger"
-                    >
-                        Delete Entry
-                    </button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- ==================================================
-             SCROLL TO TOP
-        =================================================== -->
-
-        <button
-            type="button"
-            id="scroll-top"
-            class="scroll-top"
-            aria-label="Scroll to top"
-            title="Back to top"
-        >
-            ↑
-        </button>
-
-
+    <!-- ================= TOAST ================= -->
+    <div
+        class="toast"
+        id="toast"
+        role="alert"
+        aria-live="polite"
+    >
+        <span id="toast-message">
+            Entry saved successfully!
+        </span>
     </div>
 
 
-    <!-- ==================================================
-         JAVASCRIPT
-    =================================================== -->
+    <!-- ================= DELETE MODAL ================= -->
+    <div
+        class="modal-overlay"
+        id="modal-overlay"
+        hidden
+    >
+        <div
+            class="modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title"
+        >
 
-    <script
-        src="js/script.js"
-        defer
-    ></script>
+            <h3 id="modal-title">
+                Delete Entry?
+            </h3>
+
+            <p>
+                Are you sure you want to delete this diary entry?
+                This action cannot be undone.
+            </p>
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    id="modal-cancel"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-danger"
+                    id="modal-confirm"
+                >
+                    Delete
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ================= SCROLL TOP ================= -->
+    <button
+        type="button"
+        class="scroll-top"
+        id="scroll-top"
+        aria-label="Scroll to top"
+    >
+        ↑
+    </button>
+
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
 
 </body>
-
 </html>
